@@ -49,6 +49,8 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 2 | Close the Mini App entirely (simulate offline state). | The `last_exit` timestamp is saved to the database/localStorage. | ✅ Pass |
 | 3 | Wait for 10 minutes, then relaunch the app. | An "Offline Earnings" modal appears showing the correct calculation `(NicPerSecond * time elapsed)`. The exact amount is added to the total ECTY balance. | ✅ Pass |
 
+---
+
 ### 📌 TC-005: Daily Bonus System (Exploit Prevention)
 **Module:** Economy / Rewards
 **Pre-conditions:** The user is on their first session of the day.
@@ -58,6 +60,8 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 1 | Open the game. | Bonus modal appears and reward (ECTY/Energy) is added. | ✅ Pass |
 | 2 | Claim the bonus. | Bonus is credited; "daily_bonus_claimed" event is tracked. | ✅ Pass |
 | 3 | Refresh the page. | Bonus modal does not appear again; balance does not increase. | ✅ Pass |
+
+---
 
 ### 📌 TC-006: Weather Timer Persistence
 **Module:** Game Logic / Timers
@@ -69,6 +73,8 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 2 | Wait for 10 seconds. | Timer updates correctly (e.g., to 24:50). | ✅ Pass |
 | 3 | Refresh the page. | Timer continues from 24:50 (or current time); it does not reset to 30:00. | ✅ Pass |
 
+---
+
 ### 📌 TC-007: Offline Earnings Calculation
 **Module:** Persistence / Economy
 **Pre-conditions:** User is logged in and has buildings generating income.
@@ -79,4 +85,7 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 2 | Wait for a specific duration (e.g., 5 minutes). | Income accumulates correctly based on nicPerSecond. | ✅ Pass |
 | 3 | Re-enter the game. | The "Offline Earnings" modal appears showing the correct accumulated amount. | ✅ Pass |
 | 4 | Claim the earnings. | Balance updates correctly; offline modal closes. | ✅ Pass |
+
+---
+
 
