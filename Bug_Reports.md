@@ -70,4 +70,34 @@ The settings modal falls behind the sticky header (balance, energy, weather UI).
 #### 📎 Attachments / Evidence:
 *Screenshot attached: <img width="828" height="1792" alt="photo_2026-06-14_17-33-12" src="https://github.com/user-attachments/assets/2c3ad3e2-6314-44db-994d-8bd09c5e257c" />
  *
+<br><br>
+
+---
+
+<br>
+
+### 🚨 BUG-003: Daily Bonus Exploit
+
+**Status:** Fixed (Resolved via localStorage date check).
+**Reporter:** Khalida Aliyeva  
+**Environment:** Telegram Web App / Mobile (iOS)  
+**Severity:** Critical (Blocks UI interaction)  
+**Priority:** High  
+**Module:** Economy / Rewards System 
+
+#### 📝 Description:
+Users were able to repeatedly claim the "Welcome" bonus (3,000 ECTY) by simply refreshing the page.
+
+#### 👣 Steps to Reproduce:
+1. Launch the **Econic** Telegram Mini App.
+2. Claim the Welcome package/bonus.
+3. Refresh the browser/Telegram Web App.
+4. The bonus modal re-appears, and the balance increases again.
+
+#### ✅ Expected Result:
+The bonus should be claimable only once per day.
+
+#### ❌ Actual Result:
+The bonus was claimable on every page reload.
+
 
