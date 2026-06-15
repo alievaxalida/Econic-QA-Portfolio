@@ -58,3 +58,14 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 1 | Open the game. | Bonus modal appears and reward (ECTY/Energy) is added. | ✅ Pass |
 | 2 | Claim the bonus. | Bonus is credited; "daily_bonus_claimed" event is tracked. | ✅ Pass |
 | 3 | Refresh the page. | Bonus modal does not appear again; balance does not increase. | ✅ Pass |
+
+### 📌 TC-006: Weather Timer Persistence
+**Module:** Game Logic / Timers
+**Pre-conditions:** The weather timer is active (e.g., 25:00 remaining).
+
+| Step | Action | Expected Result | Pass/Fail |
+| :--- | :--- | :--- | :--- |
+| 1 | Open the game and observe the timer. | Timer correctly displays the remaining time from local storage. | ✅ Pass |
+| 2 | Wait for 10 seconds. | Timer updates correctly (e.g., to 24:50). | ✅ Pass |
+| 3 | Refresh the page. | Timer continues from 24:50 (or current time); it does not reset to 30:00. | ✅ Pass |
+
