@@ -20,3 +20,9 @@ This checklist is executed before any new release or update to ensure that recen
 | :--- | :--- | :--- | :--- |
 | REG-006 | **Energy Timer:** Verify Energy reliably refills over time while the app is active and offline. | [✅ Pass] | *Timer functions correctly in both active and background states. The maximum cap limit (20) is strictly respected.* |
 | REG-007 | **Income Generation:** Verify that the total balance dynamically updates based on the current buildings on the grid. | [✅ Pass] | *Total ECTY balance dynamically increases in real-time based on the combined NicPerSecond rate of active buildings.* |
+| REG-008 | **Economy Rewards:** Verify balances update correctly after all rewards and spending actions. | [✅ Pass] | *Ensured that every transaction (building, merging, selling) reflects correctly in the ECTY balance.* |
+| REG-009 | **Weather Timer:** Verify the 30-min weather timer remains stable and persistent upon page refresh. | [✅ Pass] | *Fixed timer reset issue; persistence verified via local storage.* |
+| REG-010 | **Onboarding (FTUE):** Verify Tutorial completion logic remains intact and flags correctly. | [✅ Pass] | *Verified that FTUE flags do not re-trigger after the tutorial is completed.* |
+| REG-011 | **Offline Earnings:** Verify modal triggers and calculates income accurately after a period of inactivity. | [✅ Pass] | *Calculation logic verified against passive income rates.* |
+| REG-012 | **Ad Rewards:** Verify Ad rewards (Energy/Coins) are credited immediately upon completion. | [✅ Pass] | *Successful integration with ad controller; credits are applied instantly.* |
+| REG-013 | **Persistence:** Verify game state (grid, energy, balance) persists across sessions. | [✅ Pass] | *State consistency verified after browser cache clearance/reload.* |
