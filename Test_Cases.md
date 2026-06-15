@@ -69,3 +69,14 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 2 | Wait for 10 seconds. | Timer updates correctly (e.g., to 24:50). | ✅ Pass |
 | 3 | Refresh the page. | Timer continues from 24:50 (or current time); it does not reset to 30:00. | ✅ Pass |
 
+### 📌 TC-007: Offline Earnings Calculation
+**Module:** Persistence / Economy
+**Pre-conditions:** User is logged in and has buildings generating income.
+
+| Step | Action | Expected Result | Pass/Fail |
+| :--- | :--- | :--- | :--- |
+| 1 | Exit the game. | last_exit timestamp is captured. | ✅ Pass |
+| 2 | Wait for a specific duration (e.g., 5 minutes). | Income accumulates correctly based on nicPerSecond. | ✅ Pass |
+| 3 | Re-enter the game. | The "Offline Earnings" modal appears showing the correct accumulated amount. | ✅ Pass |
+| 4 | Claim the earnings. | Balance updates correctly; offline modal closes. | ✅ Pass |
+
