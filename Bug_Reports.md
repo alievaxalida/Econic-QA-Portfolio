@@ -6,7 +6,7 @@ This document contains sample bug reports identified during the manual testing p
 
 ### 🚨 BUG-001: Weather cycle timer resets to 30 minutes upon app refresh/exit
 
-**Status:** Open  
+**Status:** Closed / Resolved 
 **Reporter:** Khalida Aliyeva  
 **Environment:** Telegram Mobile (iOS)  
 **Severity:** Major  
