@@ -48,3 +48,13 @@ This document contains manual test cases executed for the **Econic** Telegram Mi
 | 1 | Note the current "ECTY" balance and total "ECTYPerSecond" income. | Data is accurately recorded before exiting. | ✅ Pass |
 | 2 | Close the Mini App entirely (simulate offline state). | The `last_exit` timestamp is saved to the database/localStorage. | ✅ Pass |
 | 3 | Wait for 10 minutes, then relaunch the app. | An "Offline Earnings" modal appears showing the correct calculation `(NicPerSecond * time elapsed)`. The exact amount is added to the total ECTY balance. | ✅ Pass |
+
+### 📌 TC-005: Daily Bonus System (Exploit Prevention)
+**Module:** Economy / Rewards
+**Pre-conditions:** The user is on their first session of the day.
+
+| Step | Action | Expected Result | Pass/Fail |
+| :--- | :--- | :--- | :--- |
+| 1 | Open the game. | Bonus modal appears and reward (ECTY/Energy) is added. | ✅ Pass |
+| 2 | Claim the bonus. | Bonus is credited; "daily_bonus_claimed" event is tracked. | ✅ Pass |
+| 3 | Refresh the page. | Bonus modal does not appear again; balance does not increase. | ✅ Pass |
